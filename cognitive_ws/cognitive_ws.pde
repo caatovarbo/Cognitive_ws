@@ -4,7 +4,8 @@ Completar la información para cada ilusión implementada
 
 Ilusión 1: Scintillating Grid 
 Author: Rupert Russell, October 2, 2010
-Implementado desde cero: No, transcripción literal del código encontrado acá: https://www.openprocessing.org/sketch/26605
+Implementado desde cero, adaptado o transcripción literal: Transcripción literal
+del código encontrado acá: https://www.openprocessing.org/sketch/26605
 
 */
 
