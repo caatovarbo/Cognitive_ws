@@ -12,6 +12,7 @@ Estudiar la naturaleza programática de varias ilusiones visuales.
 2. Opcionales (20%)
   1. Si implementó las ilusiones en el desktop, hágalo en p5.js; y, viceversa, si lo hizo en p5.js, hágalo en el desktop.
   2. Implementar algunas de las siguientes ilusiones: (pending)
+  3. Exposiciones de temas específicos discutidos en clase.
   
 ## Fecha limite
 
