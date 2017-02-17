@@ -1,4 +1,14 @@
-int illusions = 6;
+/*
+
+Completar la información para cada ilusión implementada
+
+Ilusión 1: Scintillating Grid 
+Author: Rupert Russell, October 2, 2010
+Implementado desde cero: No, transcripción literal del código encontrado acá: https://www.openprocessing.org/sketch/26605
+
+*/
+
+int illusions = 7;
 int current = 1;
 
 void setup() {
@@ -18,6 +28,7 @@ void draw() {
   case 4:
   case 5:
   case 6:
+  case 7:
     //println("implementation is missed!");
   }
   popStyle();
@@ -30,7 +41,6 @@ void keyPressed() {
 }
 
 // illusions
-
 void scintillating() {
   background(0);          // black background
 
