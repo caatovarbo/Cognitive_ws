@@ -14,16 +14,12 @@ Estudiar la naturaleza programática de varias ilusiones visuales.
   2. Implementar algunas de las siguientes ilusiones: @sechaparroc favor proponer algunas ilusiones animadas específicas que representen un buen desafio; ver sitios como [Michael Bach](http://www.michaelbach.de/ot/)
   3. Exposiciones de temas específicos discutidos en clase.
   
-## Profundización
-
-Posibles ideas para proyecto final de la materia
+## Algunas ideas para proyecto final
 
 1. Encontrar patrones en las ilusiones para crear/implementar una jerarquía de las mismas.
 2. Crear una ilusión nueva, haciendo un estudio (inicial) similar al que Schtauf _et al._ realizaron con el _scintillating grid_ (ver sección ilusiones estudiadas).
   
 ## Observaciones
-
-Favor tener presente:
 
 1. Los pull request del punto 2.I. deben ser aprobados para completar el punto opcional. Los requests de estudiarán (y aceptarán/rechazarán) en orden de llegada. Cada request nuevo debe complementar el contenido del repo en su versión inmediatamente previa, incluida la correspondiente a los requests aceptados previamente.
 2. Los puntos opcionales son válidos cuando se completan los principales. Si las ilusiones se van a desarrollar únicamente en p5.js, se considerá como completada la tarea principal.
