@@ -1,17 +1,18 @@
 /*
 
-Completar la información para cada ilusión implementada
-
-Ilusión 1: Scintillating Grid 
-Author: Rupert Russell, October 2, 2010
-Implementado desde cero, adaptado o transcripción literal: Transcripción literal
-del código encontrado acá: https://www.openprocessing.org/sketch/26605
-Etiquetas (que describen la ilusión, como su categoría, procedencia, etc.): ilusión psicológica, rejilla, Hermann
-
-*/
+ Completar la información para cada ilusión implementada
+ 
+ Ilusión 1: Scintillating Grid 
+ Author: Rupert Russell, October 2, 2010
+ Implementado desde cero, adaptado o transcripción literal: Transcripción literal
+ del código encontrado acá: https://www.openprocessing.org/sketch/26605
+ Etiquetas (que describen la ilusión, como su categoría, procedencia, etc.): ilusión psicológica, rejilla, Hermann
+ 
+ */
 
 int illusions = 7;
 int current = 1;
+boolean active = true;
 
 void setup() {
   size(800, 800);
@@ -40,6 +41,8 @@ void draw() {
 void keyPressed() {
   if (key == ' ')
     current = current < illusions ? current+1 : 1;
+  if (key == 'a')
+    active = !active;
 }
 
 // illusions
@@ -64,13 +67,15 @@ void scintillating() {
   }
 
   // Circles
-  ellipseMode(CENTER);
-  stroke(255, 255, 255);  // white circles
-  for (int i = step; i < width -5; i = i + step) {
-    for (int j = step; j < height -15; j = j + step) {
-      strokeWeight(6); 
-      point(i, j);
-      strokeWeight(3);
+  if (active) {
+    ellipseMode(CENTER);
+    stroke(255, 255, 255);  // white circles
+    for (int i = step; i < width -5; i = i + step) {
+      for (int j = step; j < height -15; j = j + step) {
+        strokeWeight(6); 
+        point(i, j);
+        strokeWeight(3);
+      }
     }
   }
 }
