@@ -11,7 +11,7 @@ Estudiar la naturaleza programática de varias ilusiones visuales.
   2. Haga una descripción de cada ilusión implementada en este mismo README (en la sección "ilusiones estudiadas"). Incluyendo al menos su autor, historia y una breve reseña.
 2. Opcionales (20%) --Fecha límite, flexible--
   1. Implementar las ilusiones en p5.js, haciendo pull request sobre la [presentación](https://github.com/VisualComputing/Cognitive).
-  2. Implementar algunas ilusiones adicionales que representen un desafío mayor, como algunas [afterimages](https://en.wikipedia.org/wiki/Afterimage), e.g., [lilac-chaser](http://www.michaelbach.de/ot/col-lilacChaser/index.html) o [waterfall](http://www.michaelbach.de/ot/mot-adapt/index.html)) o aquellas cuya geometría es compleja, e.g., [la espiral de Fraser](http://www.michaelbach.de/ot/ang-fraser/index.html).
+  2. Implementar algunas ilusiones adicionales que representen un desafío mayor, como algunas [afterimages](https://en.wikipedia.org/wiki/Afterimage), e.g., [lilac-chaser](http://www.michaelbach.de/ot/col-lilacChaser/index.html) o [waterfall](http://www.michaelbach.de/ot/mot-adapt/index.html), o aquellas cuya geometría es compleja, e.g., [la espiral de Fraser](http://www.michaelbach.de/ot/ang-fraser/index.html).
   3. Exposiciones de temas específicos discutidos en clase.
   
 ## Algunas ideas para proyecto final
