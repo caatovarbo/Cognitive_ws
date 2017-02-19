@@ -6,7 +6,7 @@ Estudiar la naturaleza programática de varias ilusiones visuales.
 
 ## Tareas
 
-1. Principales (80%) --Fecha límite Viernes 24/2/17, a las 24h--
+1. Principales (80%) --Fecha límite Domingo 26/2/17, a las 24h--
   1. Implemente en Processing seis o más ilusiones ópticas de diferentes categorías, e.g., paradójicas, geométricas y ambiguas. Emplee el sketch adjunto (cognitive_ws).
   2. Haga una descripción de cada ilusión implementada en este mismo README (en la sección "ilusiones estudiadas"). Incluyendo al menos su autor, historia y una breve reseña.
 2. Opcionales (20%) --Fecha límite, flexible--
