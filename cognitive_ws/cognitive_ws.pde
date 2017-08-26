@@ -1,17 +1,6 @@
-/*
-
- Completar la información para cada ilusión implementada
- 
- Ilusión 1: Scintillating Grid 
- Author: Rupert Russell, October 2, 2010
- Implementado desde cero, adaptado o transcripción literal: Transcripción literal
- del código encontrado acá: https://www.openprocessing.org/sketch/26605
- Etiquetas (que describen la ilusión, como su categoría, procedencia, etc.): ilusión psicológica, rejilla, Hermann
- 
- */
-
 int illusions = 7;
 int current = 1;
+//toggle illusion activation
 boolean active = true;
 
 void setup() {
@@ -20,7 +9,6 @@ void setup() {
 
 void draw() {
   background(255);
-  pushStyle();
   switch(current) {
   case 1:
     scintillating();
@@ -34,7 +22,6 @@ void draw() {
   case 7:
     //println("implementation is missed!");
   }
-  popStyle();
 }
 
 // switch illusion using the spacebar
@@ -45,8 +32,16 @@ void keyPressed() {
     active = !active;
 }
 
-// illusions
+// Complete info for each illusion
+ 
+/*
+ Scintillating Grid
+ Author: E. Lingelbach, 1994
+ Code adapted from Rupert Russell implementation
+ Tags: Physiological illusion, Hermann grid illusion
+*/
 void scintillating() {
+  pushStyle();
   background(0);          // black background
 
   //style
@@ -78,4 +73,5 @@ void scintillating() {
       }
     }
   }
+  popStyle();
 }
