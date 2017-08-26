@@ -9,6 +9,7 @@ void setup() {
 
 void draw() {
   background(255);
+  pushStyle();
   switch(current) {
   case 1:
     scintillating();
@@ -22,6 +23,7 @@ void draw() {
   case 7:
     //println("implementation is missed!");
   }
+  popStyle();
 }
 
 // switch illusion using the spacebar
@@ -41,7 +43,6 @@ void keyPressed() {
  Tags: Physiological illusion, Hermann grid illusion
 */
 void scintillating() {
-  pushStyle();
   background(0);          // black background
 
   //style
@@ -73,5 +74,4 @@ void scintillating() {
       }
     }
   }
-  popStyle();
 }
