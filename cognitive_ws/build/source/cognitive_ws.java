@@ -1,13 +1,29 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class cognitive_ws extends PApplet {
+
 int illusions = 7;
 int current = 1;
 //toggle illusion activation
 boolean active = true;
 
-void setup() {
-  size(800, 800);
+public void setup() {
+  
 }
 
-void draw() {
+public void draw() {
   background(255);
   pushStyle();
   switch(current) {
@@ -27,7 +43,7 @@ void draw() {
 }
 
 // switch illusion using the spacebar
-void keyPressed() {
+public void keyPressed() {
   if (key == ' ')
     current = current < illusions ? current+1 : 1;
   if (key == 'a')
@@ -42,7 +58,7 @@ void keyPressed() {
  Code adapted from Rupert Russell implementation
  Tags: Physiological illusion, Hermann grid illusion
 */
-void scintillating() {
+public void scintillating() {
   background(0);          // black background
 
   //style
@@ -72,6 +88,16 @@ void scintillating() {
         point(i, j);
         strokeWeight(3);
       }
+    }
+  }
+}
+  public void settings() {  size(800, 800); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "cognitive_ws" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
     }
   }
 }
