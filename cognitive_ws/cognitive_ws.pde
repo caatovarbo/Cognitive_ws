@@ -19,6 +19,8 @@ void draw() {
     zollnerIlussion();
     break;
   case 3:
+    checker();
+    break;
   case 4:
   case 5:
   case 6:
@@ -95,60 +97,63 @@ void  zollnerIlussion() {
   if (active) {
     int doubleStep = step * 2;
     int halfStep = step / 2;
+    int verticalQuadWidth = 10;
+    int verticalQuadHeight1 = 25;
+    int verticalQuadHeight2 = 45;
 
     strokeWeight(0);
     stroke(0, 0, 0);
     fill(0);
 
     //Rectángulos verticales
-    for (int x = -width; x <= width; x = x + doubleStep) {
-      for (int y = 0; y <= height; y = y + doubleStep) {
-        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
-      }
-    }
-
-    for (int x = -width + halfStep; x <= width; x = x + doubleStep) {
-      for (int y = halfStep; y <= height; y = y + doubleStep) {
-        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
-      }
-    }
-
-    for (int x = -width - step; x <= width; x = x + doubleStep) {
-      for (int y = step; y <= height; y = y + doubleStep) {
-        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
-      }
-    }
-
-    for (int x = -width - halfStep; x <= width; x = x + doubleStep) {
-      for (int y = - halfStep; y <= height; y = y + doubleStep) {
-        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
-      }
-    }
+    quadVerticalZollner(0, 0, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+    quadVerticalZollner(halfStep, halfStep, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+    quadVerticalZollner(-step, step, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+    quadVerticalZollner(-halfStep, -halfStep, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
 
     //Rectángulos Horizontales
-    for (int x = -width - step; x <= width; x = x + doubleStep) {
-      for (int y = 0; y <= height; y = y + doubleStep) {
-        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
-      }
-    }
+    quadHorizontalZollner(-step, 0, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+    quadHorizontalZollner(-halfStep, halfStep, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+    quadHorizontalZollner(0, step, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+    quadHorizontalZollner(halfStep, -halfStep, doubleStep, verticalQuadWidth, verticalQuadHeight1, verticalQuadHeight2);
+  }
+}
 
-    for (int x = -width -halfStep; x <= width; x = x + doubleStep) {
-      for (int y = halfStep; y <= height; y = y + doubleStep) {
-        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
-      }
-    }
-
-    for (int x = -width; x <= width; x = x + doubleStep) {
-      for (int y = step; y <= height; y = y + doubleStep) {
-        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
-      }
-    }
-
-    for (int x = -width + halfStep; x <= width; x = x + doubleStep) {
-      for (int y = -halfStep; y <= height; y = y + doubleStep) {
-        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
-      }
+void quadVerticalZollner(int xInit, int yInit, int increase, int vqw, int vqh1, int vqh2) {
+  for (int x = -width + xInit; x <= width; x = x + increase) {
+    for (int y = yInit; y <= height; y = y + increase) {
+      quad(x - vqw, y + vqh1, x + vqw, y + vqh2, x + vqw, y - vqh1, x - vqw, y - vqh2);
     }
   }
+}
 
+void quadHorizontalZollner(int xInit, int yInit, int increase, int vqw, int vqh1, int vqh2) {
+  for (int x = -width + xInit; x <= width; x = x + increase) {
+    for (int y = yInit; y <= height; y = y + increase) {
+      quad(x - vqh1, y + vqw, x + vqh2, y + vqw, x + vqh1, y - vqw, x - vqh2, y - vqw);
+    }
+  }
+}
+
+void checker() {
+  float step = height/8;
+  float doubleStep = step * 2;
+  
+  background(192,255,255);
+  
+  strokeWeight(0);
+  stroke(0, 0, 0);
+  fill(0, 255, 0);
+  
+  for (float i = 0; i <= width; i = i + doubleStep) {
+    for (float j = 0; j <= height; j = j + doubleStep) {
+      rect(i, j, step, step);
+    }
+  }
+  
+  for (float i = step; i <= width; i = i + doubleStep) {
+    for (float j = step; j <= height; j = j + doubleStep) {
+      rect(i, j, step, step);
+    }
+  }
 }
