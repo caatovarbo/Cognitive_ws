@@ -16,6 +16,8 @@ void draw() {
     break;
     // implement from here. Don't forget to add break for each case
   case 2:
+    zollnerIlussion();
+    break;
   case 3:
   case 4:
   case 5:
@@ -70,8 +72,83 @@ void scintillating() {
       for (int j = step; j < height -15; j = j + step) {
         strokeWeight(6);
         point(i, j);
-        strokeWeight(3);
+        //strokeWeight(3);
       }
     }
   }
+}
+
+void  zollnerIlussion() {
+  background(255);
+  strokeWeight(20);
+  smooth();
+  stroke(0, 0, 0);
+
+  int step = 100;
+  float finalPoint;
+
+  for (int x = -width; x < width; x = x + step) {
+    finalPoint = width + x;
+    line(x, 0, finalPoint, height);
+  }
+
+  if (active) {
+    int doubleStep = step * 2;
+    int halfStep = step / 2;
+
+    strokeWeight(0);
+    stroke(0, 0, 0);
+    fill(0);
+
+    //Rectángulos verticales
+    for (int x = -width; x <= width; x = x + doubleStep) {
+      for (int y = 0; y <= height; y = y + doubleStep) {
+        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
+      }
+    }
+
+    for (int x = -width + halfStep; x <= width; x = x + doubleStep) {
+      for (int y = halfStep; y <= height; y = y + doubleStep) {
+        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
+      }
+    }
+
+    for (int x = -width - step; x <= width; x = x + doubleStep) {
+      for (int y = step; y <= height; y = y + doubleStep) {
+        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
+      }
+    }
+
+    for (int x = -width - halfStep; x <= width; x = x + doubleStep) {
+      for (int y = - halfStep; y <= height; y = y + doubleStep) {
+        quad(x - 10, y + 25, x + 10, y + 45, x + 10, y - 25, x - 10, y - 45);
+      }
+    }
+
+    //Rectángulos Horizontales
+    for (int x = -width - step; x <= width; x = x + doubleStep) {
+      for (int y = 0; y <= height; y = y + doubleStep) {
+        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
+      }
+    }
+
+    for (int x = -width -halfStep; x <= width; x = x + doubleStep) {
+      for (int y = halfStep; y <= height; y = y + doubleStep) {
+        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
+      }
+    }
+
+    for (int x = -width; x <= width; x = x + doubleStep) {
+      for (int y = step; y <= height; y = y + doubleStep) {
+        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
+      }
+    }
+
+    for (int x = -width + halfStep; x <= width; x = x + doubleStep) {
+      for (int y = -halfStep; y <= height; y = y + doubleStep) {
+        quad(x - 25, y + 10, x + 45, y + 10, x + 25, y - 10, x - 45, y - 10);
+      }
+    }
+  }
+
 }
